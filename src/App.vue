@@ -18,6 +18,8 @@ export default {
       <BNavItem to="/" active-class="active">Home</BNavItem>
       <BNavItem to="/countryList/">Countries</BNavItem>
       <BNavItem to="/countryItem/:name">Selected Country</BNavItem>
+      <BNavItem to="/signUp/">Sign UP</BNavItem>
+      <BNavItem to="/signIn/">Sign In </BNavItem>
       <BNavItem to="/aboutUs/">About us</BNavItem>
     </BNav>
 
