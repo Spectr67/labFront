@@ -1,11 +1,32 @@
-<script setup></script>
+<script>
+import { BNav, BNavItem } from 'bootstrap-vue-next'
+import { RouterLink, RouterView } from 'vue-router'
+
+export default {
+  components: {
+    RouterLink,
+    RouterView,
+    BNav,
+    BNavItem,
+  },
+}
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div>
+    <BNav tabs justified>
+      <BNavItem to="/" active-class="active">Home</BNavItem>
+      <BNavItem to="/countryList/">Countries</BNavItem>
+      <BNavItem to="/countryItem/:name">Selected Country</BNavItem>
+      <BNavItem to="/aboutUs/">About us</BNavItem>
+    </BNav>
+
+    <div class="view"><RouterView /></div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.view {
+  padding-top: 50px;
+}
+</style>
